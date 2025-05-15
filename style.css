@@ -1064,9 +1064,9 @@ body {
     }
 
     .social-icons a {
-        width: 65px; /* Adjusted */
-        height: 65px;
-        font-size: 30px; /* Adjusted */
+        width: 85px; /* Adjusted */
+        height: 85px;
+        font-size: 50px; /* Adjusted */
     }
 
     .hero-slider {
@@ -1422,3 +1422,18 @@ body {
     .service-column h3 {
         font-size: 1.1rem; /* Adjusted */
     }
+
+/*  locations*/
+  .mq1{
+    background-color: #ca0f6d; 
+    color: aliceblue;
+    margin-top: 50px;
+    height: 100px;
+    padding-top: 40px;
+    font-size: 30px;
+    
+}
+
+
+
+    
