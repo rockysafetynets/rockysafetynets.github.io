@@ -1,100 +1,56 @@
 /*modify   */
 /* DESKTOP FIX */
-@media (min-width: 1400px) {
-  html {
-    font-size: 16px;
-  }
+/* ---------- FIX FOR DESKTOP SCREEN ---------- */
+@media (min-width: 1200px) {
   body {
-    font-size: 16px;
     max-width: 1440px;
     margin: auto;
+    font-size: 16px;
   }
-  .logo-title {
-    font-size: 20px;
-  }
-  #navbar {
-    padding: 10px 30px;
-  }
-  section, footer {
-    padding: 60px 40px;
-  }
-  h2 {
-    font-size: 32px !important;
-  }
-  h3 {
-    font-size: 24px !important;
-  }
-  p, li, a, button {
+
+  h1 { font-size: 36px !important; }
+  h2 { font-size: 30px !important; }
+  h3 { font-size: 24px !important; }
+  p, a, li, button {
     font-size: 18px !important;
+  }
+
+  .slide-content h1 {
+    font-size: 40px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 24px;
   }
 }
 
-/* MOBILE NAVBAR FIX */
+/* ---------- FIX FOR MOBILE NAVBAR & ICONS ---------- */
 @media (max-width: 768px) {
-  #navbar {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-  #logo img {
-    width: 180px;
-    height: auto;
-  }
-  .hamburger {
-    display: block;
-    font-size: 28px;
-    align-self: flex-end;
-  }
   #navlinks {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, #ca0f6d, #ff4081);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 100;
   }
-  #navlinks.active {
-    right: 0;
-  }
-  #navlinks li {
-    margin: 15px 0;
-    padding: 10px 20px;
-    width: 80%;
-    text-align: center;
-  }
-  #navlinks a {
-    font-size: 20px;
-    color: #ca0f6d;
-  }
+
   .social-icons {
     position: fixed;
     bottom: 20px;
-    right: 10px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
     flex-direction: row;
     gap: 10px;
+    padding: 10px;
   }
+
   .social-icons a {
     width: 50px;
     height: 50px;
     font-size: 22px;
   }
-  .slide-content h1 {
-    font-size: 1.8rem;
-  }
-  .slide-content p {
-    font-size: 1rem;
-  }
-  .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
 }
+
 
 
 
