@@ -1180,7 +1180,7 @@ body {
         max-width: 100%;
         display: flex;
         justify-content: flex-end;
-        flex-direction: row;
+        flex-direction: column;
         gap: 3px; /* Adjusted */
         padding: 5px;
         z-index: 99;
