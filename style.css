@@ -112,8 +112,8 @@ body {
     color: #ffb6c1;
 }
 
-/* Social Icons */
-.social-icons {
+/*  Icons */
+.-icons {
     display: flex;
     gap: 8px; /* Tighter gap */
     right: 8px; /* Closer to edge */
@@ -123,7 +123,7 @@ body {
     z-index: 99;
 }
 
-.social-icons a {
+.-icons a {
     width: 45px; /* Adjusted to match DSP */
     height: 45px;
     border-radius: 50%;
@@ -136,16 +136,16 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.social-icons a:hover {
+.-icons a:hover {
     transform: scale(1.1);
     background-color: #ffb6c1;
 }
 
-.social-icons .whatsapp { background-color: #1dec46; }
-.social-icons .instagram { background-color: #ff4081; }
-.social-icons .email { background-color: #ca0f6d; }
-.social-icons .facebook { background-color: #1e22f8; }
-.social-icons .phone { background-color: #0c0608; }
+.-icons .whatsapp { background-color: #1dec46; }
+.-icons .instagram { background-color: #ff4081; }
+.-icons .email { background-color: #ca0f6d; }
+.-icons .facebook { background-color: #1e22f8; }
+.-icons .phone { background-color: #0c0608; }
 
 /* Hero Slider */
 .hero-slider {
@@ -1064,9 +1064,9 @@ body {
     }
 
     .social-icons a {
-        width: 85px; /* Adjusted */
-        height: 85px;
-        font-size: 50px; /* Adjusted */
+        width: 65px; /* Adjusted */
+        height: 65px;
+        font-size: 30px; /* Adjusted */
     }
 
     .hero-slider {
@@ -1186,9 +1186,9 @@ body {
         z-index: 99;
     }
     .social-icons a {
-        width: 30px; /* Adjusted */
-        height: 30px;
-        font-size: 14px; /* Adjusted */
+        width: 45px; /* Adjusted */
+        height: 45px;
+        font-size: 20px; /* Adjusted */
     }
 
     /* Hero Slider */
