@@ -1,4 +1,4 @@
-/* Entire CSS with Modifications for Mobile and PC Issues */
+/* Entire CSS with Mobile Screen Fit Fixes */
 
 /* Global Styles */
 * {
@@ -12,6 +12,7 @@ body {
     background-color: #f5f5f5; /* Light gray */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navbar */
@@ -26,7 +27,8 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100vw; /* Added for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 #logo {
@@ -152,7 +154,8 @@ body {
     overflow: hidden;
     margin-top: 0;
     z-index: 10;
-    width: 100vw; /* Added for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .slider-container {
@@ -348,7 +351,8 @@ body {
 #about {
     padding: 100px 0;
     background-color: #f5f5f5;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .about-container {
@@ -449,7 +453,8 @@ body {
     text-align: center;
     padding: 100px 40px;
     background: linear-gradient(135deg, #ca0f6d, #ff4081);
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 #installation h2 {
@@ -500,7 +505,8 @@ body {
     padding: 100px 40px;
     background: linear-gradient(135deg, #ca0f6d, #ff4081);
     color: #ffffff;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 #free-inspection h2 {
@@ -551,12 +557,13 @@ body {
 #why-joseph {
     background-color: #f5f5f5;
     padding: 100px 40px;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .section-container {
     display: flex;
-    justify-content: space-between;
+ospod: justify-content: space-between;
     max-width: 1400px;
     margin: auto;
     gap: 50px;
@@ -578,7 +585,9 @@ body {
 .why-joseph h2 {
     font-size: 48px;
     color: #ca0f6d;
-    margin-bottom: 20px;
+   
+
+ margin-bottom: 20px;
 }
 
 .why-joseph ul {
@@ -660,7 +669,8 @@ body {
     max-width: 1400px;
     margin: auto;
     gap: 50px;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
     background-color: #f5f5f5;
 }
 
@@ -727,7 +737,8 @@ body {
     text-align: center;
     padding: 100px 40px;
     background-color: #f5f5f5;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .services h2 {
@@ -804,7 +815,8 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 100px 40px;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .why-choose-us h2 {
@@ -854,7 +866,8 @@ body {
 .gallery-section {
     margin: 100px 0;
     overflow: hidden;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
     background-color: #f5f5f5;
     padding: 100px 40px;
     text-align: center;
@@ -874,8 +887,7 @@ body {
 
 .gallery-track {
     display: flex;
-    gap: 20px;
-    animation: scrollGallery 30s linear infinite;
+    gap: 20px(subset: animation: scrollGallery 30s linear infinite;
 }
 
 .gallery-track:hover {
@@ -903,7 +915,8 @@ body {
 .about-company {
     background: linear-gradient(135deg, #ca0f6d, #ff4081);
     padding: 100px 40px;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .container {
@@ -962,7 +975,8 @@ body {
     background: #1e1e1e; /* Dark gray */
     color: #ffffff;
     padding: 100px 40px;
-    width: 100vw; /* Modified for full-screen width */
+    width: 100vw; /* Full-screen width */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .footer .container {
@@ -989,8 +1003,7 @@ body {
     color: #ffb6c1;
 }
 
-/* Modified Desktop Fix */
-/* ---------- FIX FOR DESKTOP SCREEN ---------- */
+/* Desktop Fix (Unchanged) */
 @media (min-width: 1200px) {
     body {
         max-width: 1440px;
@@ -998,84 +1011,52 @@ body {
         font-size: 16px;
     }
 
-    h1 { font-size: 2rem !important; } /* Reduced from 36px to ~32px */
-    h2 { font-size: 1.8rem !important; } /* Reduced from 30px to ~28px */
-    h3 { font-size: 1.5rem !important; } /* Reduced from 24px to ~24px */
+    h1 { font-size: 36px !important; }
+    h2 { font-size: 30px !important; }
+    h3 { font-size: 24px !important; }
     p, a, li, button {
-        font-size: 1rem !important; /* Reduced from 18px to ~16px */
+        font-size: 18px !important;
     }
 
     .slide-content h1 {
-        font-size: 2.2rem; /* Reduced from 40px to ~35px */
+        font-size: 40px;
     }
 
     .btn {
-        font-size: 0.9rem; /* Reduced from 16px */
-        padding: 8px 20px; /* Slightly smaller padding */
-    }
-
-    /* Ensure full-screen sections */
-    #navbar, .hero-slider, #about, .services, #free-inspection, .why-choose-us, .gallery-section, .about-company, .footer, #installation, #why-joseph, #duct-area-section {
-        width: 100vw;
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Adjust social icons for desktop */
-    .social-icons {
-        right: 10px;
-        top: 120px;
-    }
-    .social-icons a {
-        width: 60px;
-        height: 60px;
-        font-size: 28px;
-    }
-
-    /* Adjust navbar links */
-    #navlinks a {
-        font-size: 1.2rem; /* Reduced from 24px */
-    }
-
-    /* Adjust service box images */
-    .service-box img {
-        width: 250px;
-        height: 250px;
-    }
-
-    /* Adjust gallery images */
-    .gallery-track img {
-        width: 350px;
-        height: 500px;
+        font-size: 16px;
+        padding: 10px 24px;
     }
 }
 
 /* Modified Mobile Fix */
-/* ---------- FIX FOR MOBILE NAVBAR & ICONS ---------- */
 @media (max-width: 768px) {
-    /* Full-screen width for all sections */
+    /* Ensure full-screen fit for all sections */
     #navbar, .hero-slider, #about, .services, #free-inspection, .why-choose-us, .gallery-section, .about-company, .footer, #installation, #why-joseph, #duct-area-section {
         width: 100vw;
+        max-width: 100%; /* Prevent overflow */
         padding-left: 0;
         padding-right: 0;
         margin: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     /* Navbar */
     #navbar {
-        padding: 10px 0;
+        padding: 10px 5px; /* Reduced padding */
         height: 80px;
-        width: 100vw; /* Ensure full width */
+        width: 100vw;
+        max-width: 100%;
     }
     #logo img {
-        width: 200px;
+        width: 150px; /* Scaled down for mobile */
+        max-width: 100%;
     }
     .logo-title {
-        font-size: 20px;
+        font-size: 18px; /* Smaller font */
     }
     .hamburger {
         display: block;
+        font-size: 24px; /* Smaller hamburger */
     }
     #navlinks {
         position: fixed;
@@ -1083,198 +1064,347 @@ body {
         right: -100%;
         height: 100vh;
         width: 100vw; /* Full width */
+        max-width: 100%; /* Prevent overflow */
         background: linear-gradient(135deg, #ca0f6d, #ff4081);
         flex-direction: column;
         justify-content: center;
-        padding: 20px;
+        align-items: center;
+        padding: 10px;
         transition: right 0.3s ease-in-out;
         z-index: 100;
+        overflow-x: hidden;
     }
     #navlinks.active {
         right: 0;
     }
     #navlinks li {
         background: #ffffff;
-        margin: 10px 20px;
+        margin: 8px 10px;
+        padding: 8px 15px;
         text-align: center;
-        width: calc(100% - 40px); /* Full width minus margins */
+        width: calc(100% - 20px); /* Full width minus margins */
+        max-width: 100%;
     }
     #navlinks a {
-        font-size: 20px;
+        font-size: 16px; /* Smaller font */
         color: #ca0f6d;
     }
 
-    /* Modified Social Icons */
+    /* Social Icons */
     .social-icons {
         position: fixed;
-        bottom: 10px; /* Moved to bottom for better visibility */
-        right: 0; /* Align to right */
-        width: 100%;
-        justify-content: flex-end; /* Align icons to right */
-        flex-direction: row; /* Horizontal layout */
-        gap: 8px;
-        padding: 10px;
+        bottom: 10px; /* Bottom placement */
+        right: 5px; /* Align to right */
+        width: auto; /* Fit content */
+        max-width: 100%; /* Prevent overflow */
+        display: flex;
+        justify-content: flex-end; /* Align right */
+        flex-direction: row; /* Horizontal */
+        gap: 5px; /* Tight spacing */
+        padding: 5px;
         z-index: 99;
     }
     .social-icons a {
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
+        width: 40px; /* Smaller icons */
+        height: 40px;
+        font-size: 18px; /* Smaller font */
+        border-radius: 50%;
     }
 
     /* Hero Slider */
     .hero-slider, .slide {
-        height: 70vh;
-        width: 100vw; /* Ensure full width */
+        height: 60vh; /* Reduced height */
+        min-height: 400px;
+        width: 100vw;
+        max-width: 100%;
+    }
+    .slide-content h1 {
+        font-size: 1.8rem; /* Scaled down */
+    }
+    .slide-content p {
+        font-size: 0.9rem; /* Scaled down */
+    }
+    .btn, .book-service-btn {
+        padding: 8px 20px; /* Smaller buttons */
+        font-size: 0.8rem;
+        margin-left: 10px;
     }
 
     /* Containers */
     .container, .services-container, .about-container, .section-container, .installation-steps {
         max-width: 100%;
+        width: 100%;
         margin: 0;
-        padding: 0 10px;
+        padding: 0 5px; /* Minimal padding */
+        overflow-x: hidden;
     }
 
     /* About Section */
     #about {
-        padding: 60px 0;
+        padding: 40px 0; /* Reduced padding */
     }
     .about-container {
-        padding: 0 10px;
+        padding: 0 5px;
+        flex-direction: column;
+    }
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .about-text {
+        padding: 15px;
+    }
+    .about-text h2 {
+        font-size: 28px; /* Scaled down */
+    }
+    .about-text h3 {
+        font-size: 20px;
+    }
+    .about-text p {
+        font-size: 16px;
     }
 
     /* Installation Section */
     #installation {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     .installation-steps {
-        gap: 20px;
+        gap: 15px;
     }
     .step {
-        min-width: 250px;
-        padding: 20px;
+        min-width: 100%; /* Full width */
+        max-width: 100%;
+        padding: 15px;
+    }
+    .step h3 {
+        font-size: 20px;
+    }
+    .step p {
+        font-size: 16px;
     }
 
     /* Services Section */
     .services {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     .services-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
     }
     .service-box {
-        padding: 20px;
-        margin: 0 10px;
-        width: calc(100% - 20px);
+        padding: 15px;
+        margin: 0 5px;
+        width: calc(100% - 10px);
+        max-width: 100%;
     }
     .service-box img {
         width: 100%;
         height: auto;
-        max-width: 250px;
-        max-height: 250px;
+        max-width: 200px; /* Scaled down */
+        max-height: 200px;
+    }
+    .service-box h3 {
+        font-size: 20px;
+    }
+    .service-box p {
+        font-size: 16px;
+    }
+    .service-box a {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 
     /* Free Inspection */
     #free-inspection {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     .inspection-form {
         flex-direction: column;
-        padding: 0 10px;
+        padding: 0 5px;
         max-width: 100%;
     }
     .inspection-form input, .inspection-form button {
-        width: calc(100% - 20px);
-        font-size: 20px;
-        margin: 0 10px;
+        width: calc(100% - 10px);
+        font-size: 16px;
+        padding: 10px;
+        margin: 0 5px;
     }
 
     /* Why Joseph */
     #why-joseph {
-        padding: 60px 0;
+        padding: 40px 0;
+    }
+    .section-container {
+        flex-direction: column;
+    }
+    .duct-area img {
+        width: 100%;
+        height: auto;
+        max-height: 600px; /* Scaled down */
+    }
+    .why-joseph h2, .achievements h2 {
+        font-size: 28px;
+    }
+    .why-joseph li {
+        font-size: 16px;
+    }
+    .achievement-box h3 {
+        font-size: 20px;
+    }
+    .achievement-box p {
+        font-size: 16px;
     }
 
     /* Duct Area */
     #duct-area-section {
-        padding: 60px 0;
+        padding: 40px 0;
+        flex-direction: column;
+    }
+    .duct-image img {
+        max-width: 100%;
+        max-height: 400px;
+    }
+    .duct-content h2 {
+        font-size: 28px;
+    }
+    .duct-content p {
+        font-size: 16px;
+    }
+    .progress-box h3 {
+        font-size: 18px;
+    }
+    .progress-fill {
+        font-size: 14px;
     }
 
     /* Why Choose Us */
     .why-choose-us {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     .features {
-        padding: 0 10px;
+        padding: 0 5px;
+        gap: 20px;
+    }
+    .feature {
+        width: 100%; /* Full width */
+        max-width: 100%;
+    }
+    .feature img {
+        width: 60px;
+        height: 60px;
+    }
+    .feature h3 {
+        font-size: 20px;
+    }
+    .feature p {
+        font-size: 16px;
     }
 
     /* Gallery */
     .gallery-section {
-        margin: 60px 0;
-        padding: 60px 0;
+        margin: 40px 0;
+        padding: 40px 0;
     }
     .gallery-track img {
-        width: 250px;
-        height: 400px;
+        width: 200px; /* Scaled down */
+        height: 300px;
+        max-width: 100%;
+    }
+    .gallery-section h2 {
+        font-size: 28px;
     }
 
     /* About Company */
     .about-company {
-        padding: 60px 0;
+        padding: 40px 0;
+    }
+    .about-left {
+        max-width: 100%;
+    }
+    .about-right {
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .company-logo {
+        width: 150px;
+    }
+    .about-left p, .service-column li {
+        font-size: 16px;
+    }
+    .service-column h3 {
+        font-size: 20px;
     }
 
     /* Footer */
     .footer {
-        padding: 60px 0;
+        padding: 40px 0;
     }
-
-    /* Text Sizes */
-    .about-text h2, .services h2, #installation h2, #free-inspection h2, .why-joseph h2, .achievements h2, .duct-content h2, .why-choose-us h2, .gallery-section h2, .service-column h3 {
-        font-size: 36px;
+    .footer .container {
+        flex-direction: column;
+        gap: 20px;
     }
-    .about-text p, .duct-content p, .service-box p, .feature p, .why-joseph li, .footer p, .footer a, .about-left p, .service-column li {
-        font-size: 20px;
-    }
-
-    /* Adjust slide content for mobile */
-    .slide-content h1 {
-        font-size: 2rem; /* Reduced from 3.5rem */
-    }
-    .slide-content p {
-        font-size: 1rem; /* Reduced from 1.5rem */
+    .footer-left p, .footer-right p, .footer-left a, .footer-right a {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
+    #navbar {
+        padding: 8px 5px;
+        height: 60px;
+    }
     #logo img {
-        width: 150px;
+        width: 120px; /* Smaller logo */
     }
     .logo-title {
-        font-size: 18px;
+        font-size: 16px;
     }
     .hamburger {
-        font-size: 28px;
+        font-size: 20px;
     }
-    #navlinks {
-        width: 100vw;
+    #navlinks li {
+        margin: 5px 10px;
+        padding: 6px 10px;
     }
-    .gallery-track img {
-        width: 200px;
-        height: 300px;
+    #navlinks a {
+        font-size: 14px;
     }
-    .service-box img {
-        max-width: 200px;
-        max-height: 200px;
-    }
-    .about-text h2, .services h2, #installation h2, #free-inspection h2, .why-joseph h2, .achievements h2, .duct-content h2, .why-choose-us h2, .gallery-section h2, .service-column h3 {
-        font-size: 28px;
-    }
-    .about-text p, .duct-content p, .service-box p, .feature p, .why-joseph li, .footer p, .footer a, .about-left p, .service-column li {
-        font-size: 18px;
+    .social-icons {
+        bottom: 5px;
+        right: 5px;
+        gap: 3px;
     }
     .social-icons a {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .hero-slider, .slide {
+        height: 50vh;
+        min-height: 300px;
+    }
+    .slide-content h1 {
+        font-size: 1.5rem;
+    }
+    .slide-content p {
+        font-size: 0.8rem;
+    }
+    .btn, .book-service-btn {
+        padding: 6px 15px;
+        font-size: 0.7rem;
+    }
+    .about-text h2, .services h2, #installation h2, #free-inspection h2, .why-joseph h2, .achievements h2, .duct-content h2, .why-choose-us h2, .gallery-section h2, .service-column h3 {
+        font-size: 24px;
+    }
+    .about-text p, .duct-content p, .service-box p, .feature p, .why-joseph li, .footer p, .footer a, .about-left p, .service-column li {
+        font-size: 14px;
+    }
+    .service-box img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .gallery-track img {
+        width: 150px;
+        height: 225px;
     }
 }
