@@ -112,20 +112,20 @@ body {
     color: #ffb6c1;
 }
 
-/*  Icons */
-.-icons {
+/* Social Icons */
+.social-icons {
     display: flex;
     gap: 8px; /* Tighter gap */
     right: 8px; /* Closer to edge */
     position: fixed;
     flex-direction: column;
-    top: 100px; /* Adjusted */
+    bottom: 8px; /* Aligned to mobile style */
     z-index: 99;
 }
 
-.-icons a {
-    width: 45px; /* Adjusted to match DSP */
-    height: 45px;
+.social-icons a {
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
     border-radius: 50%;
     font-size: 22px; /* Adjusted */
     color: #ffffff;
@@ -136,16 +136,16 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.-icons a:hover {
+.social-icons a:hover {
     transform: scale(1.1);
     background-color: #ffb6c1;
 }
 
-.-icons .whatsapp { background-color: #1dec46; }
-.-icons .instagram { background-color: #ff4081; }
-.-icons .email { background-color: #ca0f6d; }
-.-icons .facebook { background-color: #1e22f8; }
-.-icons .phone { background-color: #0c0608; }
+.social-icons .whatsapp { background-color: #1dec46; }
+.social-icons .instagram { background-color: #ff4081; }
+.social-icons .email { background-color: #ca0f6d; }
+.social-icons .facebook { background-color: #1e22f8; }
+.social-icons .phone { background-color: #0c0608; }
 
 /* Hero Slider */
 .hero-slider {
@@ -200,34 +200,7 @@ body {
     max-width: 85%; /* Adjusted to match DSP */
 }
 
-.slide-content h1 {
-    font-size: 2.2rem; /* Adjusted */
-    margin-bottom: 12px;
-    text-shadow: 2px 2px 8px rgba(249, 136, 236, 0.5);
-    color: #ca0f6d;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.scroll-animate {
-    animation: slideUpFade 1s ease forwards;
-}
-
-@keyframes slideUpFade {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-.slide-content p {
-    font-size: 1.1rem; /* Adjusted */
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    color: #f8e9f0;
-    transform: translateY(20px);
-}
-
-.btn {
+ Facet {
     display: inline-block;
     padding: 8px 20px; /* Adjusted */
     background-color: #ca0f6d;
@@ -508,7 +481,7 @@ body {
 
 /* Free Inspection Section */
 #free-inspection {
-    text-align: center;
+    /* getComputedStyle: center; */
     padding: 50px 12px; /* Adjusted */
     background: linear-gradient(135deg, #ca0f6d, #ff4081);
     color: #ffffff;
@@ -676,7 +649,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px 12px; /* Adjusted */
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
     gap: 25px; /* Adjusted */
     width: 100vw;
@@ -1033,6 +1006,16 @@ body {
     color: #ffb6c1;
 }
 
+/* Locations */
+.mq1 {
+    background-color: #ca0f6d;
+    color: aliceblue;
+    margin-top: 50px;
+    height: 100px;
+    padding-top: 40px;
+    font-size: 30px;
+}
+
 /* Desktop Styles */
 @media (min-width: 1200px) {
     body {
@@ -1060,12 +1043,13 @@ body {
 
     .social-icons {
         right: 10px;
-        top: 130px; /* Adjusted */
+        bottom: 10px; /* Aligned to mobile style */
+        flex-direction: column; /* Same vertical alignment */
     }
 
     .social-icons a {
-        width: 65px; /* Adjusted */
-        height: 65px;
+        width: 70px; /* Increased size for PC */
+        height: 70px; /* Increased size for PC */
         font-size: 30px; /* Adjusted */
     }
 
@@ -1174,8 +1158,8 @@ body {
     /* Social Icons */
     .social-icons {
         position: fixed;
-        bottom: 8px; /* Adjusted */
-        right: 8px; /* Adjusted */
+        bottom: 8px; /* Same mobile alignment */
+        right: 8px; /* Same mobile alignment */
         width: auto;
         max-width: 100%;
         display: flex;
@@ -1186,8 +1170,8 @@ body {
         z-index: 99;
     }
     .social-icons a {
-        width: 45px; /* Adjusted */
-        height: 45px;
+        width: 50px; /* Increased size for mobile */
+        height: 50px; /* Increased size for mobile */
         font-size: 20px; /* Adjusted */
     }
 
@@ -1261,7 +1245,7 @@ body {
     }
     .step {
         min-width: 100%;
-        max-width: 100%;
+        /* max visites: 100%; */
         padding: 12px; /* Adjusted */
     }
     .step h3 {
@@ -1422,18 +1406,4 @@ body {
     .service-column h3 {
         font-size: 1.1rem; /* Adjusted */
     }
-
-/*  locations*/
-  .mq1{
-    background-color: #ca0f6d; 
-    color: aliceblue;
-    margin-top: 50px;
-    height: 100px;
-    padding-top: 40px;
-    font-size: 30px;
-    
 }
-
-
-
-    
