@@ -124,3 +124,61 @@ document.addEventListener("DOMContentLoaded", function () {
         form.reset(); // Clear form
     });
 });
+
+// gallery
+// Gallery Tab Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Tab switching
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const gallerySections = document.querySelectorAll('.gallery-section');
+  
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons and sections
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      gallerySections.forEach(section => section.classList.remove('active-tab'));
+      
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      // Show corresponding section
+      const tabId = this.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active-tab');
+      
+      // Smooth scroll to section
+      document.getElementById(tabId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+  
+  // Lazy loading for images
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.getAttribute('src');
+          img.removeAttribute('loading');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    lazyImages.forEach(img => imageObserver.observe(img));
+  }
+  
+  // Gallery item hover effects
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+});
