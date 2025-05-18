@@ -1019,14 +1019,14 @@ body {
 /* Desktop Styles */
 @media (min-width: 1200px) {
     body {
-        max-width: 1200px;
+        width: 100%;
         margin: auto;
         font-size: 16px;
     }
 
     #navbar {
         padding: 12px 20px;
-        height: 80px; /* Adjusted */
+        height: 120px; /* Adjusted */
     }
 
     #logo img {
@@ -1598,5 +1598,53 @@ body {
 
 .top-contact a:hover {
     color: #ffb6c1;
+}
+
+
+/* Gallery Button Section */
+.gallery-button-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.gallery-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border-style: groove;
+    border-color: aliceblue;
+    background-color: #ca0f6d;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.gallery-button:hover {
+    background-color: #a00c57;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .gallery-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin: 15px auto;
+    }
 }
 
